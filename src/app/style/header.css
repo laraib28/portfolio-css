@@ -1,0 +1,90 @@
+/* Main navbar container */
+.left-side {
+    background-color: rgb(25, 25, 65);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Logo styling */
+.logo {
+    padding: 5px;
+}
+
+/* Links container */
+.links {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    padding-right:400px ;
+}
+
+/* Individual link items */
+.links li {
+    list-style: none;
+}
+
+/* Link styling */
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.link:hover {
+    color: rgb(40, 40, 100);
+}
+
+/* Responsive button - hidden by default */
+.button {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+    display: none; /* Hidden by default */
+}
+
+/* Show button and hide links on smaller screens */
+@media (max-width: 768px) {
+    .button {
+        display: block; /* Show the button on small screens */
+    }
+    .links {
+        display: none; /* Hide the links initially */
+       
+    }
+}
+
+/* Mobile menu container */
+.mobile-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: rgb(25, 25, 65);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Mobile links styling */
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+}
+
+.mobile-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-links li a:hover {
+    color: rgb(40, 40, 100);
+}

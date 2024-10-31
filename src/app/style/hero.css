@@ -1,0 +1,115 @@
+.parent {
+    background-color: rgb(14, 14, 36);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 23px 0;
+    flex-wrap: wrap;
+}
+
+.heading {
+    width: 30%;
+    font-size: 2.5rem;
+    padding-top: 50px;
+    text-align: center;
+    padding: 0 20px; /* Add padding to prevent text from touching edges */
+}
+
+.heading p {
+    font-size: 2.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    border-radius: 3px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.btn {
+    background-color: rgb(77, 77, 206);
+    padding: 8px 16px; /* Increase padding for button */
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer;
+}
+
+.paragraph {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    text-align: center; /* Center align text */
+    padding: 0 20px; /* Prevent text from hitting edges */
+}
+
+.highlight {
+    color: rgb(49, 49, 129);
+    font-size: 2.5rem;
+}
+
+.paragraph img {
+    width: 80px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; /* Add padding for smaller screens */
+        text-align: center;
+    }
+
+    .heading {
+        width: 100%;
+        font-size: 2rem;
+        padding-top: 20px;
+        padding-right: 40px;
+    }
+
+    .paragraph {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Ensure buttons take up full width */
+        gap: 10px;
+        padding: 0; /* Remove padding for better centering */
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: 80%; /* Keep buttons within screen width */
+        max-width: 200px; /* Limit button width */
+    }
+
+    .highlight {
+        font-size: 2rem;
+    }
+
+    .paragraph img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+        padding-top: 15px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        max-width: 150px; /* Further limit button width */
+    }
+
+    .highlight {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,58 @@
+/* Ensure the whole viewport is filled */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main section styling */
+.main {
+    background-color: rgb(77, 77, 100);
+    color: white;
+    flex-grow: 1; /* Makes .main take available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Footer styling */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+    background-color: rgb(20, 20, 40);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.footer li {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .main {
+        padding: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+}

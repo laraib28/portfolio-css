@@ -1,0 +1,112 @@
+/* Ensures the background covers the full viewport */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main {
+    background-color: rgb(14, 14, 36);
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Prevents padding from adding extra height */
+}
+
+.heading h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+    gap: 15px;
+}
+
+.form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form input,
+.form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Ensures inputs take full width of form */
+    box-sizing: border-box;
+}
+
+.form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Centering and Styling for Button */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: rgb(77, 77, 206); /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Removes border */
+    outline: none; /* Removes outline */
+    border-radius: 6px;
+    padding: 12px 24px; /* Ensures balanced padding */
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .form label {
+        font-size: 0.9rem;
+    }
+
+    .form input,
+    .form textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
